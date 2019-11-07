@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-  <meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 
-  
-  <title>Archive | Hexo</title>
+<link rel="stylesheet" href="/css/main.css">
 
-  <link rel="shortcut icon" href="/images/favicon.png">
-  <link rel="alternate" href="/atom.xml" title="Hexo">
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/archives/index.html">
@@ -20,318 +59,391 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 
-  <meta name="format-detection" content="telephone=no,email=no">
-  <meta name="theme-color" content="#9C27B0">
-  <meta name="description" content>
-  <meta name="keywords" content>
+<link rel="canonical" href="http://yoursite.com/archives/">
 
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Hexo">
-  <meta name="msapplication-starturl" content="http://yoursite.com/archives/">
-  <meta name="msapplication-navbutton-color" content="#9C27B0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Hexo">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link rel="apple-touch-icon" href="/images/favicon.png">
 
-  
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: false,
+    isPage: false,
+    isArchive: true
+  };
+</script>
 
-  
-    <link rel="canonical" href="http://yoursite.com/archives/index.html">
+  <title>Archive | Hexo</title>
   
 
-  
-  
 
-  
-  
-  
 
-  <link rel="stylesheet" href="/css/mdui.css">
-<link rel="stylesheet" href="/css/style.css">
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
-<body class="mdui-appbar-with-toolbar mdui-drawer-body-left mdui-theme-primary-indigo mdui-theme-accent-pink">
-  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
-  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
-  <div class="mdui-toolbar mdui-color-theme">
-    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
-    <a href="/" class="mdui-typo-headline">Hexo</a>
-    <div class="mdui-toolbar-spacer"></div>
-    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'Search'}"><i class="mdui-icon material-icons">search</i></a>
-    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}"><i class="mdui-icon material-icons">rss_feed</i></a>
-  </div>
-</header>
-<div class="mdui-dialog" id="search">
-  
-    <div class="search-form">
-      <input type="search" class="search-form-input" placeholder="Enter the key words">
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    <div class="search-result" data-resource="/search.xml"></div>
-  
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
 </div>
-  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
-  <div class="mdui-grid-tile">
-    <img src="/images/banner.png" style="height: 160px;">
-    <img src="/images/avatar.png" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
-    <div class="mdui-grid-tile-actions">
-      <div class="mdui-grid-tile-text">
-        <div class="mdui-grid-tile-title">John Doe</div>
-        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i></div>
-      </div>
-      
-    </div>
-  </div>
 
-  <div class="mdui-list" mdui-collapse="{accordion: true}">
-    <a href="/" class="mdui-list-item mdui-ripple">
-      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
-      <div class="mdui-list-item-content">Home</div>
-    </a>
-    <div class="mdui-collapse-item">
-      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">inbox</i>
-        <div class="mdui-list-item-content">Archive</div>
-        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-      </div>
-      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
-        
-        <a class="mdui-ripple sidebar_archives-link" href="/archives/2019/11/">November 2019<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2019/10/">October 2019<span class="mdui-ripple sidebar_archives-count">4</span></a>
-        
-      </div>
-    </div>
-    <div class="mdui-collapse-item">
-      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">chrome_reader_mode</i>
-        <div class="mdui-list-item-content">Category</div>
-        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-      </div>
-      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
-        
-        
-        
-          <a href="javascript:;" class="mdui-list-item mdui-ripple mdui-p-l-2 mdui-text-color-theme" style="justify-content: center;">No Categories</a>
-        
-      </div>
-    </div>
-    <div class="mdui-collapse-item">
-      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
-        <div class="mdui-list-item-content">Tag</div>
-        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-      </div>
-      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
-        
-        
-        
-          <a href="javascript:;" class="mdui-list-item mdui-ripple mdui-p-l-2 mdui-text-color-theme" style="justify-content: center;">No Tags</a>
-        
-      </div>
-    </div>
-    <a href="/about" class="mdui-list-item mdui-ripple">
-      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
-      <div class="mdui-list-item-content">About</div>
-    </a>
-  </div>
 
-  <div class="mdui-divider"></div>
-
-  <div class="mdui-list" mdui-collapse="{accordion: true}">
-    
-      <a href="/tags" class="mdui-list-item mdui-ripple">Tags</a>
-    
-      <a href="/gallery" class="mdui-list-item mdui-ripple">Gallery</a>
-    
-    <div class="mdui-collapse-item">
-      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-        <div class="mdui-list-item-content">Links</div>
-        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
-      </div>
-      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
-        
-          <a href="https://github.com" target="_blank" class="mdui-list-item mdui-ripple mdui-p-l-2 mdui-text-color-theme-accent" style="justify-content: center;">Github</a>
-        
-        
-      </div>
-    </div>
-  </div>
-</aside>
-  <main id="main" class="mdui-m-t-5 fadeIn animated">
-
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/11/08/testone/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-6.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">testone</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-11-08 / <i class="iconfont">&#xe601;</i> John Doe</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        000000000000000000000000000000000000000
-
-      
-      <a href="/2019/11/08/testone/">Read More >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-      
-    </footer>
-  </article>
-
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/11/07/2019-11-7/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-5.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">2019/11/7</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-11-07 / <i class="iconfont">&#xe601;</i> John Doe</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        THis is a bloooooooog!
-where my
-flag?
-
-      
-      <a href="/2019/11/07/2019-11-7/">Read More >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-      
-    </footer>
-  </article>
-
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/10/07/POSTTEST1/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-2.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">POSTTEST1</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-10-07 / <i class="iconfont">&#xe601;</i> John Doe</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        hello everyone
-
-      
-      <a href="/2019/10/07/POSTTEST1/">Read More >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-      
-    </footer>
-  </article>
-
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/10/07/POSTTEST-BLOG/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-4.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">POSTTEST BLOG</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-10-07 / <i class="iconfont">&#xe601;</i> John Doe</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        
-      
-      <a href="/2019/10/07/POSTTEST-BLOG/">Read More >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-      
-    </footer>
-  </article>
-
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/10/07/my-first-blog/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-7.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">my-first-blog</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-10-07 / <i class="iconfont">&#xe601;</i> John Doe</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        THIS IS MY FIRST BLOG.
-
-      
-      <a href="/2019/10/07/my-first-blog/">Read More >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-      
-    </footer>
-  </article>
-
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/10/06/hello-world/">
-      <header class="mdui-card-media mdui-ripple">
-        <img src="/images/random/material-19.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">Hello World</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-10-06 / <i class="iconfont">&#xe601;</i> John Doe</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        Welcome to Hexo
-      
-      <a href="/2019/10/06/hello-world/">Read More >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-      
-    </footer>
-  </article>
-
-</main>
-  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
-  <div class="mdui-p-y-0 mdui-text-center">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  </div>
-  <div class="mdui-p-y-1 mdui-text-center">
-    Copyright &copy; 2019 - 2019 John Doe<br>
-    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
-    
-  </div>
-</footer>
-  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">arrow_upward</i></button>
+<nav class="site-nav">
   
-  <script src="/js/mdui.js"></script>
-<script src="/js/script.js"></script>
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  
+  
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <span class="collection-header">Um..! 6 posts in total. Keep on posting.</span>
+      </div>
+
+      
+    <div class="collection-year">
+      <h1 class="collection-header">2019</h1>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2019-11-08T00:09:14+08:00"
+              content="2019-11-08">
+          11-08
+        </time>
+      </div>
+
+      <h2 class="post-title">
+          <a class="post-title-link" href="/2019/11/08/testone/" itemprop="url">
+            <span itemprop="name">testone</span>
+          </a>
+      </h2>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2019-11-07T23:08:00+08:00"
+              content="2019-11-07">
+          11-07
+        </time>
+      </div>
+
+      <h2 class="post-title">
+          <a class="post-title-link" href="/2019/11/07/2019-11-7/" itemprop="url">
+            <span itemprop="name">2019/11/7</span>
+          </a>
+      </h2>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2019-10-07T21:57:59+08:00"
+              content="2019-10-07">
+          10-07
+        </time>
+      </div>
+
+      <h2 class="post-title">
+          <a class="post-title-link" href="/2019/10/07/POSTTEST1/" itemprop="url">
+            <span itemprop="name">POSTTEST1</span>
+          </a>
+      </h2>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2019-10-07T21:52:46+08:00"
+              content="2019-10-07">
+          10-07
+        </time>
+      </div>
+
+      <h2 class="post-title">
+          <a class="post-title-link" href="/2019/10/07/POSTTEST-BLOG/" itemprop="url">
+            <span itemprop="name">POSTTEST BLOG</span>
+          </a>
+      </h2>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2019-10-07T21:37:37+08:00"
+              content="2019-10-07">
+          10-07
+        </time>
+      </div>
+
+      <h2 class="post-title">
+          <a class="post-title-link" href="/2019/10/07/my-first-blog/" itemprop="url">
+            <span itemprop="name">my-first-blog</span>
+          </a>
+      </h2>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2019-10-06T21:45:30+08:00"
+              content="2019-10-06">
+          10-06
+        </time>
+      </div>
+
+      <h2 class="post-title">
+          <a class="post-title-link" href="/2019/10/06/hello-world/" itemprop="url">
+            <span itemprop="name">Hello World</span>
+          </a>
+      </h2>
+
+    </header>
+  </article>
+
+
+    </div>
+  </div>
+  
+  
+  
+
+  
+
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="John Doe"
+    src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.5.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
 </html>
