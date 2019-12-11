@@ -6,21 +6,20 @@
     
 
     
-    <title>Oh</title>
+    <title>标签: Markdown | Oh</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="helloworld 该文件在hexo/source文件夹里">
+    <meta name="description" content="For knowledge">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Oh">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Markdown/index.html">
 <meta property="og:site_name" content="Oh">
-<meta property="og:description" content="helloworld 该文件在hexo/source文件夹里">
+<meta property="og:description" content="For knowledge">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-09T12:51:23.072Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oh">
-<meta name="twitter:description" content="helloworld 该文件在hexo/source文件夹里">
+<meta name="twitter:description" content="For knowledge">
     
 
     
@@ -133,121 +132,76 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    Oh
+    <i class="icon fa fa-tag"></i>标签: <em>Markdown</em>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="page-" class="article article-single article-type-page" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
         
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
         
-        <div class="article-entry" itemprop="articleBody">
-            helloworld<brs>
-该文件在hexo/source文件夹里</brs>
+        <a href="/2019/12/11/title/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/2019/12/11/title/timg.jpg)" alt="Hexo博客的使用及markdown的语法" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2019/12/11/title/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/hexo/">hexo</a>
+            </div>
+            <div class="date"><time datetime="2019-12-11T13:04:23.000Z" itemprop="datePublished">2019-12-11</time></div>
         </div>
-        <footer class="article-footer">
-            
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2019/12/11/title/">Hexo博客的使用及markdown的语法</a>
+        </h1>
+    
 
-
-
-    <a data-url="http://yoursite.com/about/index.html" data-id="ck41di5cr0000zstf51fqb9xj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+        <p class="article-excerpt">
+            一、hexo博客命令的使用说明1.hexo generate (hexo g)生成静态文件，会在当前目录下生成一个新的叫做public的文件夹。
+2.hexo server (hexo s)启动本地web服务，用于博客的预览。访问localhost:4000就可以看到效果。
+3.hexo deploy (hexo d)部署播客到平台上。
+4.hexo new “postName”新建文章。(注意n
+        </p>
     </div>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "author": {
-            "@type": "Person",
-            "name": "OYsJcHar"
-        },
-        
-        "image": "http://yoursite.com",
-        
-        
-        "datePublished": "2019-12-09",
-        "dateCreated": "2019-12-09",
-        "dateModified": "2019-12-09",
-        "url": "http://yoursite.com/about/index.html",
-        "description": "helloworld
-该文件在hexo/source文件夹里",
-        "wordCount": 1
-    }
-</script>
-
 </article>
-
-    <section id="comments">
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
-
+        </div>
     
-    </section>
+
+
+    </div></section>
 
 
 
@@ -471,13 +425,11 @@
     var disqus_shortname = 'hueman';
     
     
-    var disqus_url = 'http://yoursite.com/about/index.html';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
