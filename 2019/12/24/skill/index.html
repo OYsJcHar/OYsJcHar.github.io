@@ -21,7 +21,7 @@
 <meta property="og:description" content="#DOS批处理命令 批量将图片改为.jpg格式打开记事本，在记事本里面输入ren . *.jpg批处理命令。这条命令的作用是将文件里的所有文件重命名为.jpg的图片文件，然后保存在需要修改文件的当前文件夹下，注意保存类型选择所有文件，文件名称是.bat的批处理文件。双击改批处理文件就可以完成文件的批量改名了。 批量给图片（其他文件）改名最普遍的方法是全选图片文件-&amp;gt;按住ctrl-&amp;gt;在第">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/12/24/skill/timg2.jpg">
-<meta property="og:updated_time" content="2019-12-24T02:18:19.748Z">
+<meta property="og:updated_time" content="2019-12-24T02:39:21.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些实用技巧总结（持续更新）">
 <meta name="twitter:description" content="#DOS批处理命令 批量将图片改为.jpg格式打开记事本，在记事本里面输入ren . *.jpg批处理命令。这条命令的作用是将文件里的所有文件重命名为.jpg的图片文件，然后保存在需要修改文件的当前文件夹下，注意保存类型选择所有文件，文件名称是.bat的批处理文件。双击改批处理文件就可以完成文件的批量改名了。 批量给图片（其他文件）改名最普遍的方法是全选图片文件-&amp;gt;按住ctrl-&amp;gt;在第">
@@ -186,7 +186,7 @@
             <p>#DOS批处理命令</p>
 <h3 id="批量将图片改为-jpg格式"><a href="#批量将图片改为-jpg格式" class="headerlink" title="批量将图片改为.jpg格式"></a>批量将图片改为.jpg格式</h3><p>打开记事本，在记事本里面输入ren <em>.</em> *.jpg批处理命令。这条命令的作用是将文件里的所有文件重命名为.jpg的图片文件，然后保存在需要修改文件的当前文件夹下，注意保存类型选择所有文件，文件名称是.bat的批处理文件。双击改批处理文件就可以完成文件的批量改名了。</p>
 <h3 id="批量给图片（其他文件）改名"><a href="#批量给图片（其他文件）改名" class="headerlink" title="批量给图片（其他文件）改名"></a>批量给图片（其他文件）改名</h3><p>最普遍的方法是全选图片文件-&gt;按住ctrl-&gt;在第一个图片上右键重命名-&gt;修改-&gt;鼠标点击别处<br>这个时候文件也就都改名了，不过批量改名之后的结果是结尾带着(1)、(2)这种，写在markdown里很不方便也很不美观，查询得知也可以使用BAT命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@echo off&amp;setlocal EnableDelayedExpansion  </span><br><span class="line">set a=1    </span><br><span class="line">for /f &quot;delims=&quot; %%i in (&apos;dir /b *.jpg&apos;) do (  </span><br><span class="line">if not &quot;%%~ni&quot;==&quot;%~n0&quot; (if !a! LSS 10 (ren &quot;%%i&quot; &quot;list0!    a!.jpg&quot;) else ren &quot;%%i&quot; &quot;list!a!.jpg&quot;    </span><br><span class="line">set/a a+=1   </span><br><span class="line">)  </span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off&amp;<span class="built_in">setlocal</span> EnableDelayedExpansion  </span><br><span class="line"><span class="built_in">set</span> a=<span class="number">1</span>    </span><br><span class="line"><span class="keyword">for</span> /f "delims=" <span class="variable">%%i</span> <span class="keyword">in</span> ('<span class="built_in">dir</span> /b *.jpg') <span class="keyword">do</span> (  </span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> "<span class="variable">%%~</span>ni"=="%~n0" (<span class="keyword">if</span> <span class="variable">!a!</span> <span class="keyword">LSS</span> <span class="number">10</span> (<span class="built_in">ren</span> "<span class="variable">%%i</span>" "list0!    a!.jpg") <span class="keyword">else</span> <span class="built_in">ren</span> "<span class="variable">%%i</span>" "list<span class="variable">!a!</span>.jpg"    </span><br><span class="line"><span class="built_in">set</span>/a a+=<span class="number">1</span>   </span><br><span class="line">)  </span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <p>同样，写在新建文件里，重命名为ren.bat，文件里的list可以改成想改的名字。如果是其他的文件类型就改成其他的文件后缀。</p>
 <h3 id="批量删除一个类型的文件"><a href="#批量删除一个类型的文件" class="headerlink" title="批量删除一个类型的文件"></a>批量删除一个类型的文件</h3><p><code>del *.txt*</code><br>批量删除txt文件，需要这个操作主要是因为我把图片放在word里另存为html来导出图片的时候，图片会分别存在png、jpg两种格式..我不得不删掉一种格式。    </p>
@@ -272,7 +272,7 @@
         "description": "#DOS批处理命令
 批量将图片改为.jpg格式打开记事本，在记事本里面输入ren . *.jpg批处理命令。这条命令的作用是将文件里的所有文件重命名为.jpg的图片文件，然后保存在需要修改文件的当前文件夹下，注意保存类型选择所有文件，文件名称是.bat的批处理文件。双击改批处理文件就可以完成文件的批量改名了。
 批量给图片（其他文件）改名最普遍的方法是全选图片文件-&gt;按住ctrl-&gt;在第",
-        "wordCount": 87
+        "wordCount": 111
     }
 </script>
 
