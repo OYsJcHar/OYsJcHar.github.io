@@ -20,12 +20,12 @@
 <meta property="og:site_name" content="OBslcogar">
 <meta property="og:description" content="2012年4月23日哈勃太空望远镜拍摄到的大麦哲伦星云星系中的蜘蛛星云照片的合成影像。    20 成绩单很明显是sql注入。具体笔记参考我的mysql注入笔记1.先查字段：id= 1&amp;#39; order by 5#出现异常，说明有四个字段。2.id=0&amp;#39; union select 1,2,3,database()# 查询数据库名称为skctf_flag。3.id=0&amp;#39; un">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://gitee.com/2019/12/23/bugku_web/timg3.jpg">
+<meta property="og:image" content="https://gitee.com/blog/oysjchar/2019/12/23/bugku_web/timg3.jpg">
 <meta property="og:updated_time" content="2019-12-26T12:24:58.640Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bugku_web1~20题解">
 <meta name="twitter:description" content="2012年4月23日哈勃太空望远镜拍摄到的大麦哲伦星云星系中的蜘蛛星云照片的合成影像。    20 成绩单很明显是sql注入。具体笔记参考我的mysql注入笔记1.先查字段：id= 1&amp;#39; order by 5#出现异常，说明有四个字段。2.id=0&amp;#39; union select 1,2,3,database()# 查询数据库名称为skctf_flag。3.id=0&amp;#39; un">
-<meta name="twitter:image" content="https://gitee.com/2019/12/23/bugku_web/timg3.jpg">
+<meta name="twitter:image" content="https://gitee.com/blog/oysjchar/2019/12/23/bugku_web/timg3.jpg">
     
 
     
@@ -183,13 +183,13 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/2019/12/23/bugku_web/timg3.jpg" alt></p>
+            <p><img src="/blog/oysjchar/2019/12/23/bugku_web/timg3.jpg" alt></p>
 <center>
 <font face="楷体" size="2">2012年4月23日哈勃太空望远镜拍摄到的大麦哲伦星云星系中的蜘蛛星云照片的合成影像。 </font>
 </center>
 
-<h1 id="20-成绩单"><a href="#20-成绩单" class="headerlink" title="20 成绩单"></a>20 成绩单</h1><p>很明显是sql注入。<br>具体笔记参考我的mysql注入笔记<br>1.先查字段：<code>id= 1&#39; order by 5#</code>出现异常，说明有四个字段。<br>2.<code>id=0&#39; union select 1,2,3,database()#</code> 查询数据库名称为skctf_flag。<br>3.<code>id=0&#39; union select 1,group_concat(TABLE_NAME),3,4 from information_schema.tables where table_schema=database() #</code><br>爆出表名fl4g,sc。<br>4.<code>id=0&#39; union select 1,group_concat(column_name),3,4 from information_schema.columns where table_name=&#39;fl4g&#39; #</code> 爆字段名skctf_flag。<br>5.<code>id=0&#39; union select 1,2,3,skctf_flag from fl4g#</code> 查询字段，得出flag。<br><img src="/2019/12/23/bugku_web/i31.jpg" alt></p>
-<h1 id="19-备份是个好习惯"><a href="#19-备份是个好习惯" class="headerlink" title="19 备份是个好习惯"></a>19 备份是个好习惯</h1><p><img src="/2019/12/23/bugku_web/i30.jpg" alt> </p>
+<h1 id="20-成绩单"><a href="#20-成绩单" class="headerlink" title="20 成绩单"></a>20 成绩单</h1><p>很明显是sql注入。<br>具体笔记参考我的mysql注入笔记<br>1.先查字段：<code>id= 1&#39; order by 5#</code>出现异常，说明有四个字段。<br>2.<code>id=0&#39; union select 1,2,3,database()#</code> 查询数据库名称为skctf_flag。<br>3.<code>id=0&#39; union select 1,group_concat(TABLE_NAME),3,4 from information_schema.tables where table_schema=database() #</code><br>爆出表名fl4g,sc。<br>4.<code>id=0&#39; union select 1,group_concat(column_name),3,4 from information_schema.columns where table_name=&#39;fl4g&#39; #</code> 爆字段名skctf_flag。<br>5.<code>id=0&#39; union select 1,2,3,skctf_flag from fl4g#</code> 查询字段，得出flag。<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i31.jpg" alt></p>
+<h1 id="19-备份是个好习惯"><a href="#19-备份是个好习惯" class="headerlink" title="19 备份是个好习惯"></a>19 备份是个好习惯</h1><p><img src="/blog/oysjchar/2019/12/23/bugku_web/i30.jpg" alt> </p>
 <p>打开页面是一串重复的md5，解密之后是空值，没什么用处。<br>那么就根据提示查找一下备份文件（.bak）通过尝试输入或者扫后台都可以得到一份下载的文件。<br>打开后源码如下：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by PhpStorm.</span></span><br><span class="line"><span class="comment"> * User: Norse</span></span><br><span class="line"><span class="comment"> * Date: 2017/8/6</span></span><br><span class="line"><span class="comment"> * Time: 20:22</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">include_once</span> <span class="string">"flag.php"</span>;</span><br><span class="line">ini_set(<span class="string">"display_errors"</span>, <span class="number">0</span>);</span><br><span class="line">$str = strstr($_SERVER[<span class="string">'REQUEST_URI'</span>], <span class="string">'?'</span>);<span class="comment">//设置变量str的值为url中?后面的字符串</span></span><br><span class="line">$str = substr($str,<span class="number">1</span>);<span class="comment">//str为str中第一位开始的字符串</span></span><br><span class="line">$str = str_replace(<span class="string">'key'</span>,<span class="string">''</span>,$str);<span class="comment">//key替换为空</span></span><br><span class="line">parse_str($str);<span class="comment">//str字符串解析为变量</span></span><br><span class="line"><span class="keyword">echo</span> md5($key1);</span><br><span class="line"><span class="keyword">echo</span> md5($key2);</span><br><span class="line"><span class="comment">//如果key1和key2的Md5加密值相等 但是原值不等就得到flag</span></span><br><span class="line"><span class="keyword">if</span>(md5($key1) == md5($key2) &amp;&amp; $key1 !== $key2)&#123;</span><br><span class="line">    <span class="keyword">echo</span> $flag.<span class="string">"取得flag"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -202,52 +202,52 @@
 <p>s214587387a </p>
 <p>所以开始打开页面显示的两个NULL也就是此时key1key2都没有值。</p>
 <h1 id="18-点击一百万次"><a href="#18-点击一百万次" class="headerlink" title="18 点击一百万次"></a>18 点击一百万次</h1><p>POST传参即可<br><code>click=100001</code></p>
-<p><img src="/2019/12/23/bugku_web/i29.jpg" alt></p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i29.jpg" alt></p>
 <h1 id="17-输入密码查看flag"><a href="#17-输入密码查看flag" class="headerlink" title="17 输入密码查看flag"></a>17 输入密码查看flag</h1><p>爆破就完事啦。</p>
 <h1 id="16-flag在index里"><a href="#16-flag在index里" class="headerlink" title="16 flag在index里"></a>16 flag在index里</h1><p>本题的知识点：本地文件包含漏洞 PHP伪协议。</p>
-<p><img src="/2019/12/23/bugku_web/i25.jpg" alt></p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i25.jpg" alt></p>
 <p>进入网页点击之后可以观察到url地址后方有一个file，这就是关键字。<br>这里先放出解出结果的payload:<br><a href="http://120.24.86.145:8005/post/index.php?file=php://filter/read=convert.base64-encode/resource=index.php" target="_blank" rel="noopener">http://120.24.86.145:8005/post/index.php?file=php://filter/read=convert.base64-encode/resource=index.php</a><br>访问后会得到一段base64编码，解码就可以得到flag。</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;title&gt;Bugku-ctf&lt;/title&gt;</span><br><span class="line">    </span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	error_reporting(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">if</span>(!$_GET[file])&#123;<span class="keyword">echo</span> <span class="string">'&lt;a href="./index.php?file=show.php"&gt;click me? no&lt;/a&gt;'</span>;&#125;</span><br><span class="line">	$file=$_GET[<span class="string">'file'</span>];</span><br><span class="line">	<span class="keyword">if</span>(strstr($file,<span class="string">"../"</span>)||stristr($file, <span class="string">"tp"</span>)||stristr($file,<span class="string">"input"</span>)||stristr($file,<span class="string">"data"</span>))&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">"Oh no!"</span>;</span><br><span class="line">		<span class="keyword">exit</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">include</span>($file); </span><br><span class="line"><span class="comment">//flag:flag&#123;edulcni_elif_lacol_si_siht&#125;</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2019/12/23/bugku_web/i26.jpg" alt></p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i26.jpg" alt></p>
 <p>接下来解释一下原理:</p>
 <pre><code>?file= get传参
 php://是一个协议
 php://filter/是可以访问本地的协议
 read=convert.base64-encode/转换过滤器，是表示以base编码后的方式读取源码（如果不编码的话会当成PHP语句而执行）
-resource=index.php表示目标文件为index.php</code></pre><p>源码中的include()函数的意思是执行()中的文件，无法执行或不成功会返回文件的源码。<br>这里include的内容可以自己选，我们file传的参数是该函数引入了index.php的base64编码，无法执行所以返回编码后的值。<br><img src="/2019/12/23/bugku_web/i27.jpg" alt><br><img src="/2019/12/23/bugku_web/i28.jpg" alt><br>参考网页：<br><a href="https://www.php.net/manual/zh/wrappers.php.php" target="_blank" rel="noopener">php://协议</a><br><a href="https://www.php.net/manual/zh/filters.convert.php" target="_blank" rel="noopener">转换过滤器</a><br><a href="https://www.leavesongs.com/PENETRATION/php-filter-magic.html" target="_blank" rel="noopener">php://妙用</a><br><a href="https://blog.csdn.net/zpy1998zpy/article/details/80585443" target="_blank" rel="noopener">某博客</a>  </p>
+resource=index.php表示目标文件为index.php</code></pre><p>源码中的include()函数的意思是执行()中的文件，无法执行或不成功会返回文件的源码。<br>这里include的内容可以自己选，我们file传的参数是该函数引入了index.php的base64编码，无法执行所以返回编码后的值。<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i27.jpg" alt><br><img src="/blog/oysjchar/2019/12/23/bugku_web/i28.jpg" alt><br>参考网页：<br><a href="https://www.php.net/manual/zh/wrappers.php.php" target="_blank" rel="noopener">php://协议</a><br><a href="https://www.php.net/manual/zh/filters.convert.php" target="_blank" rel="noopener">转换过滤器</a><br><a href="https://www.leavesongs.com/PENETRATION/php-filter-magic.html" target="_blank" rel="noopener">php://妙用</a><br><a href="https://blog.csdn.net/zpy1998zpy/article/details/80585443" target="_blank" rel="noopener">某博客</a>  </p>
 <h1 id="15-web4"><a href="#15-web4" class="headerlink" title="15 web4"></a>15 web4</h1><p>首先查看源码，发现这里有特殊的地方，直接百度escape。  </p>
-<p><img src="/2019/12/23/bugku_web/i22.jpg" alt></p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i22.jpg" alt></p>
 <p>是一种加密方式，可以在线解密。<br><a href="https://escape.supfree.net/" target="_blank" rel="noopener">unescape解码</a></p>
-<p><img src="/2019/12/23/bugku_web/i23.jpg" alt>  </p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i23.jpg" alt>  </p>
 <p>根据源码提示可以写出答案，submit即可。</p>
-<p><img src="/2019/12/23/bugku_web/i24.jpg" alt></p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i24.jpg" alt></p>
 <h1 id="14-管理员系统"><a href="#14-管理员系统" class="headerlink" title="14 管理员系统"></a>14 管理员系统</h1><p>是一个登陆的页面，F12检查元素的时候看见了一行base64注释，<br>解密为test123,应该管理员的密码。<br>根据提示：IP禁止访问，请联系本地管理员登陆，IP已被记录.</p>
-<p><img src="/2019/12/23/bugku_web/i20.jpg" alt>  </p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i20.jpg" alt>  </p>
 <p>应该想到X-Forwarded-For:  </p>
 <pre><code>简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP </code></pre><p>所以我们伪造一个XFF头，伪装成本地登录就可以了：<br><code>X-Forwarded-For:127.0.0.1</code> </p>
-<p><img src="/2019/12/23/bugku_web/i21.jpg" alt></p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i21.jpg" alt></p>
 <p>可以在header里添加，也可以直接在框中写，然后send to repeater-&gt;go就出现flag了</p>
 <h1 id="13-网站被黑"><a href="#13-网站被黑" class="headerlink" title="13 网站被黑"></a>13 网站被黑</h1><p>先拿御剑扫一波后台。<br>扫到/shell.php，访问需要密码，尝试弱密码无效之后开始爆破。<br>抓包-&gt;send to intruder-&gt;选择simple list-&gt;自带的密码-&gt;start attack</p>
-<p><img src="/2019/12/23/bugku_web/i16.jpg" alt> </p>
-<p><img src="/2019/12/23/bugku_web/i17.jpg" alt> </p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i16.jpg" alt> </p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i17.jpg" alt> </p>
 <p>发现了长度不同的字符，这也就是密码了。</p>
-<p><img src="/2019/12/23/bugku_web/i18.jpg" alt>  </p>
-<p>输入就可以得到flag。<br><img src="/2019/12/23/bugku_web/i19.jpg" alt></p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i18.jpg" alt>  </p>
+<p>输入就可以得到flag。<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i19.jpg" alt></p>
 <h1 id="12-头等舱"><a href="#12-头等舱" class="headerlink" title="12 头等舱"></a>12 头等舱</h1><p>抓包-&gt;send to repeater-&gt;go。</p>
-<h1 id="11-web5"><a href="#11-web5" class="headerlink" title="11 web5"></a>11 web5</h1><p><img src="/2019/12/23/bugku_web/i13.jpg" alt> </p>
+<h1 id="11-web5"><a href="#11-web5" class="headerlink" title="11 web5"></a>11 web5</h1><p><img src="/blog/oysjchar/2019/12/23/bugku_web/i13.jpg" alt> </p>
 <p>打开发现是一个提交窗口<br>首先查看源码，发现了奇怪的字符。</p>
-<p><img src="/2019/12/23/bugku_web/i14.jpg" alt>  </p>
+<p><img src="/blog/oysjchar/2019/12/23/bugku_web/i14.jpg" alt>  </p>
 <p>这里就到本题要点：jjencode 和  aaencode（颜文字）</p>
 <p>什么是jjencode?</p>
 <pre><code>将JS代码转换成只有符号的字符串</code></pre><p>什么是aaencode？</p>
-<pre><code>将JS代码转换成常用的网络表情</code></pre><p>可以直接利用浏览器的控制台输入密文，执行后即可解密。<br><img src="/2019/12/23/bugku_web/i15.jpg" alt>  </p>
+<pre><code>将JS代码转换成常用的网络表情</code></pre><p>可以直接利用浏览器的控制台输入密文，执行后即可解密。<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i15.jpg" alt>  </p>
 <p>不要忘记题目最后要求大写。</p>
-<h1 id="10-变量1"><a href="#10-变量1" class="headerlink" title="10 变量1"></a>10 变量1</h1><p><img src="/2019/12/23/bugku_web/i10.jpg" alt><br>首先分析源码 preg_match()函数是正则表达式判断</p>
+<h1 id="10-变量1"><a href="#10-变量1" class="headerlink" title="10 变量1"></a>10 变量1</h1><p><img src="/blog/oysjchar/2019/12/23/bugku_web/i10.jpg" alt><br>首先分析源码 preg_match()函数是正则表达式判断</p>
 <blockquote>
-<p>\w表示任意一个单词字符，即[a-zA-Z0-9_] ,+将前面的字符匹配一次或多次，$/结尾<br>所以我们不能构造eval()等函数。<br>不过在<code>var_dump($$args)</code>中，args作为了可变变量,简单理解可以认为是$($args)，可以构造超全局变量$GLOBALS,<br><code>$GLOBALS [一个包含了全部变量的全局组合数组]</code><br><img src="/2019/12/23/bugku_web/i11.jpg" alt></p>
+<p>\w表示任意一个单词字符，即[a-zA-Z0-9_] ,+将前面的字符匹配一次或多次，$/结尾<br>所以我们不能构造eval()等函数。<br>不过在<code>var_dump($$args)</code>中，args作为了可变变量,简单理解可以认为是$($args)，可以构造超全局变量$GLOBALS,<br><code>$GLOBALS [一个包含了全部变量的全局组合数组]</code><br><img src="/blog/oysjchar/2019/12/23/bugku_web/i11.jpg" alt></p>
 </blockquote>
-<p>我们构造args=GLOBALS，就得到flag了<br><img src="/2019/12/23/bugku_web/i12.jpg" alt></p>
+<p>我们构造args=GLOBALS，就得到flag了<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i12.jpg" alt></p>
 <p>区分global和$GLOBALS[]：前者为变量实体 后者为别名引用</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>  </span><br><span class="line">$var1 = <span class="number">1</span>;  </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span><span class="params">()</span></span>&#123;  </span><br><span class="line"><span class="keyword">unset</span>($GLOBALS[<span class="string">'var1'</span>]);  </span><br><span class="line">&#125;  </span><br><span class="line">test();  </span><br><span class="line"><span class="keyword">echo</span> $var1;  </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -257,15 +257,15 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
 <p>意外的打印了1。</p>
 <p>证明删除的只是别名，$GLOBALS[‘var’]的引用，起本身的值没有受到任何的改变。`</p>
 <h1 id="09-本地包含"><a href="#09-本地包含" class="headerlink" title="09 本地包含"></a>09 本地包含</h1><p>这个题我打不开。。</p>
-<h1 id="08-你必须让他停下"><a href="#08-你必须让他停下" class="headerlink" title="08 你必须让他停下"></a>08 你必须让他停下</h1><p>这个题抓包就可以了，抓到包之后。<br>send to repeater-&gt; go n次（频率的原因不一定几次 十五次之内大概）就可以在右侧得到flag了。<br><img src="/2019/12/23/bugku_web/i09.jpg" alt></p>
-<h1 id="07-域名解析"><a href="#07-域名解析" class="headerlink" title="07 域名解析"></a>07 域名解析</h1><p>修改：C:\Windows\System32\drivers\etc 路径下的host文件。<br><img src="/2019/12/23/bugku_web/i07.jpg" alt><br>在最下面一行加入：123.206.87.240 flag.baidu.com<br>保存后在浏览器访问：<a href="http://flag.baidu.com/" target="_blank" rel="noopener">http://flag.baidu.com/</a> 就能看到flag了。<br><img src="/2019/12/23/bugku_web/i08.jpg" alt></p>
-<h1 id="06-web3"><a href="#06-web3" class="headerlink" title="06 web3"></a>06 web3</h1><p>这道题会一直弹出JS对话框，查看源码会发现注释有问题，该格式为unicode编码，转换一下就可以了。<br><a href="http://tool.chinaz.com/tools/unicode.aspx" target="_blank" rel="noopener">unicode在线转化</a><br><img src="/2019/12/23/bugku_web/i05.jpg" alt><br><img src="/2019/12/23/bugku_web/i06.jpg" alt></p>
-<h1 id="05-矛盾"><a href="#05-矛盾" class="headerlink" title="05 矛盾"></a>05 矛盾</h1><p>该题主要是利<code>is_numeric()</code>函数的漏洞以及PHP的“==”0是弱类型比较（数值相等就可以了），所以构造1加上字符串来传参就可以。<br>eg:1x 1abc。<br><img src="/2019/12/23/bugku_web/i04.jpg" alt></p>
-<h1 id="04-web基础-POST"><a href="#04-web基础-POST" class="headerlink" title="04 web基础$_POST"></a>04 web基础$_POST</h1><p>根据源码构造post传参即可。<br><img src="/2019/12/23/bugku_web/i03.jpg" alt> </p>
-<h1 id="03-web基础-GET"><a href="#03-web基础-GET" class="headerlink" title="03 web基础$_GET"></a>03 web基础$_GET</h1><p>根据源码构造get传参即可。<br><img src="/2019/12/23/bugku_web/i02.jpg" alt></p>
+<h1 id="08-你必须让他停下"><a href="#08-你必须让他停下" class="headerlink" title="08 你必须让他停下"></a>08 你必须让他停下</h1><p>这个题抓包就可以了，抓到包之后。<br>send to repeater-&gt; go n次（频率的原因不一定几次 十五次之内大概）就可以在右侧得到flag了。<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i09.jpg" alt></p>
+<h1 id="07-域名解析"><a href="#07-域名解析" class="headerlink" title="07 域名解析"></a>07 域名解析</h1><p>修改：C:\Windows\System32\drivers\etc 路径下的host文件。<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i07.jpg" alt><br>在最下面一行加入：123.206.87.240 flag.baidu.com<br>保存后在浏览器访问：<a href="http://flag.baidu.com/" target="_blank" rel="noopener">http://flag.baidu.com/</a> 就能看到flag了。<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i08.jpg" alt></p>
+<h1 id="06-web3"><a href="#06-web3" class="headerlink" title="06 web3"></a>06 web3</h1><p>这道题会一直弹出JS对话框，查看源码会发现注释有问题，该格式为unicode编码，转换一下就可以了。<br><a href="http://tool.chinaz.com/tools/unicode.aspx" target="_blank" rel="noopener">unicode在线转化</a><br><img src="/blog/oysjchar/2019/12/23/bugku_web/i05.jpg" alt><br><img src="/blog/oysjchar/2019/12/23/bugku_web/i06.jpg" alt></p>
+<h1 id="05-矛盾"><a href="#05-矛盾" class="headerlink" title="05 矛盾"></a>05 矛盾</h1><p>该题主要是利<code>is_numeric()</code>函数的漏洞以及PHP的“==”0是弱类型比较（数值相等就可以了），所以构造1加上字符串来传参就可以。<br>eg:1x 1abc。<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i04.jpg" alt></p>
+<h1 id="04-web基础-POST"><a href="#04-web基础-POST" class="headerlink" title="04 web基础$_POST"></a>04 web基础$_POST</h1><p>根据源码构造post传参即可。<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i03.jpg" alt> </p>
+<h1 id="03-web基础-GET"><a href="#03-web基础-GET" class="headerlink" title="03 web基础$_GET"></a>03 web基础$_GET</h1><p>根据源码构造get传参即可。<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i02.jpg" alt></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?变量名=变量值</span><br></pre></td></tr></table></figure>
 
-<h1 id="02-计算器"><a href="#02-计算器" class="headerlink" title="02 计算器"></a>02 计算器</h1><p>修改maxlength 也就是输入框的长度，修改成验证码的长度就可以了。<br><img src="/2019/12/23/bugku_web/i01.jpg" alt> </p>
+<h1 id="02-计算器"><a href="#02-计算器" class="headerlink" title="02 计算器"></a>02 计算器</h1><p>修改maxlength 也就是输入框的长度，修改成验证码的长度就可以了。<br><img src="/blog/oysjchar/2019/12/23/bugku_web/i01.jpg" alt> </p>
 <h1 id="01-web2"><a href="#01-web2" class="headerlink" title="01 web2"></a>01 web2</h1><p>F12检察源码即可。</p>
 
         </div>
@@ -338,7 +338,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
             "name": "OYsJcHar"
         },
         "headline": "Bugku_web1~20题解",
-        "image": "https://gitee.com/oysjchar/2019/12/23/bugku_web/timg3.jpg",
+        "image": "https://gitee.com/oysjchar/blog/oysjchar/2019/12/23/bugku_web/timg3.jpg",
         "keywords": "CTF",
         "genre": "CTF",
         "datePublished": "2019-12-23",
@@ -457,7 +457,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                             <a href="/blog/2019/12/24/skill/" class="thumbnail">
     
     
-        <span style="background-image:url(/2019/12/24/skill/timg2.jpg)" alt="一些实用技巧总结（持续更新）" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/oysjchar/2019/12/24/skill/timg2.jpg)" alt="一些实用技巧总结（持续更新）" class="thumbnail-image"></span>
     
     
 </a>
@@ -477,7 +477,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                             <a href="/blog/2019/12/23/bugku_web/" class="thumbnail">
     
     
-        <span style="background-image:url(/2019/12/23/bugku_web/timg3.jpg)" alt="Bugku_web1~20题解" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/oysjchar/2019/12/23/bugku_web/timg3.jpg)" alt="Bugku_web1~20题解" class="thumbnail-image"></span>
     
     
 </a>
@@ -497,7 +497,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                             <a href="/blog/2019/12/11/title/" class="thumbnail">
     
     
-        <span style="background-image:url(/2019/12/11/title/timg.jpg)" alt="Hexo博客的使用及markdown的语法" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/oysjchar/2019/12/11/title/timg.jpg)" alt="Hexo博客的使用及markdown的语法" class="thumbnail-image"></span>
     
     
 </a>
@@ -517,7 +517,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                             <a href="/blog/2019/12/08/aaa/" class="thumbnail">
     
     
-        <span style="background-image:url(/2019/12/08/aaa/a.jpg)" alt="BLOG" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/oysjchar/2019/12/08/aaa/a.jpg)" alt="BLOG" class="thumbnail-image"></span>
     
     
 </a>
