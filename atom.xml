@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://gitee.com/oysjchar/"/>
-  <updated>2019-12-26T12:29:35.418Z</updated>
+  <updated>2020-01-08T12:04:43.029Z</updated>
   <id>https://gitee.com/oysjchar/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BLOG</title>
+    <link href="https://gitee.com/oysjchar/2020/01/08/ab/"/>
+    <id>https://gitee.com/oysjchar/2020/01/08/ab/</id>
+    <published>2020-01-08T12:04:41.000Z</published>
+    <updated>2020-01-08T12:04:43.029Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is my blog.<br><img src="/blog/oysjchar/2020/01/08/ab/a.jpg" alt></p><hr><p>？？？！！！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This is my blog.&lt;br&gt;&lt;img src=&quot;/blog/oysjchar/2020/01/08/ab/a.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;？？？！！！&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="xxx" scheme="https://gitee.com/oysjchar/categories/xxx/"/>
+    
+    
+      <category term="tag1" scheme="https://gitee.com/oysjchar/tags/tag1/"/>
+    
+      <category term="tag2" scheme="https://gitee.com/oysjchar/tags/tag2/"/>
+    
+  </entry>
   
   <entry>
     <title>一些实用技巧总结（持续更新）</title>
