@@ -16,16 +16,16 @@
 <meta name="keywords" content="CTF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bugku_web1~20题解">
-<meta property="og:url" content="http://yoursite.com/2019/12/23/bugku_web/index.html">
+<meta property="og:url" content="https://gitee.com/oysjchar/2019/12/23/bugku_web/index.html">
 <meta property="og:site_name" content="OBslcogar">
 <meta property="og:description" content="2012年4月23日哈勃太空望远镜拍摄到的大麦哲伦星云星系中的蜘蛛星云照片的合成影像。    20 成绩单很明显是sql注入。具体笔记参考我的mysql注入笔记1.先查字段：id= 1&amp;#39; order by 5#出现异常，说明有四个字段。2.id=0&amp;#39; union select 1,2,3,database()# 查询数据库名称为skctf_flag。3.id=0&amp;#39; un">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/12/23/bugku_web/timg3.jpg">
+<meta property="og:image" content="https://gitee.com/2019/12/23/bugku_web/timg3.jpg">
 <meta property="og:updated_time" content="2019-12-26T12:24:58.640Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bugku_web1~20题解">
 <meta name="twitter:description" content="2012年4月23日哈勃太空望远镜拍摄到的大麦哲伦星云星系中的蜘蛛星云照片的合成影像。    20 成绩单很明显是sql注入。具体笔记参考我的mysql注入笔记1.先查字段：id= 1&amp;#39; order by 5#出现异常，说明有四个字段。2.id=0&amp;#39; union select 1,2,3,database()# 查询数据库名称为skctf_flag。3.id=0&amp;#39; un">
-<meta name="twitter:image" content="http://yoursite.com/2019/12/23/bugku_web/timg3.jpg">
+<meta name="twitter:image" content="https://gitee.com/2019/12/23/bugku_web/timg3.jpg">
     
 
     
@@ -34,19 +34,19 @@
 
     
 
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    <link rel="stylesheet" href="/blog/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/blog/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/blog/libs/source-code-pro/styles.css">
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/blog/css/style.css">
 
-    <script src="/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/blog/libs/jquery/3.4.1/jquery.min.js"></script>
     
     
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+        <link rel="stylesheet" href="/blog/libs/lightgallery/css/lightgallery.min.css">
     
     
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+        <link rel="stylesheet" href="/blog/libs/justified-gallery/justifiedGallery.min.css">
     
     
     
@@ -62,7 +62,7 @@
             <div class="container-inner">
                 <div id="header-title">
                     <h1 class="logo-wrap">
-                        <a href="/" class="logo"></a>
+                        <a href="/blog/" class="logo"></a>
                     </h1>
                     
                 </div>
@@ -72,17 +72,17 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/">主页</a>
+                                    <a class="main-nav-list-link" href="/blog/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CTF/">CTF</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/hexo/">hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/xxx/">xxx</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/CTF/">CTF</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/hexo/">hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/categories/xxx/">xxx</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/board/index.html">更新文章</a>
+                                    <a class="main-nav-list-link" href="/blog/board/index.html">更新文章</a>
                                 </li>
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/about/index.html">关于我</a>
+                                    <a class="main-nav-list-link" href="/blog/about/index.html">关于我</a>
                                 </li>
                             
                         </ul>
@@ -115,13 +115,13 @@
             TAGS: '标签',
             UNTITLED: '(未命名)',
         },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
+        ROOT_URL: '/blog/',
+        CONTENT_URL: '/blog/content.json',
     };
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
-<script src="/js/insight.js"></script>
+<script src="/blog/js/insight.js"></script>
 
 </div>
                         </nav>
@@ -138,7 +138,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/CTF/">CTF</a>
+    <a class="page-title-link" href="/blog/categories/CTF/">CTF</a>
     </h1>
 </div>
 
@@ -161,7 +161,7 @@
                 
     <div class="article-date">
       <i class="fa fa-calendar"></i>
-      <a href="/2019/12/23/bugku_web/" class="article-date">
+      <a href="/blog/2019/12/23/bugku_web/" class="article-date">
          <time datetime="2019-12-23T08:32:23.000Z" itemprop="datePublished">2019-12-23</time>
       </a>
     </div>
@@ -172,7 +172,7 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/CTF/">CTF</a>
+        <a class="tag-link" href="/blog/tags/CTF/">CTF</a>
     </div>
 
                 
@@ -338,13 +338,13 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
             "name": "OYsJcHar"
         },
         "headline": "Bugku_web1~20题解",
-        "image": "http://yoursite.com/2019/12/23/bugku_web/timg3.jpg",
+        "image": "https://gitee.com/oysjchar/2019/12/23/bugku_web/timg3.jpg",
         "keywords": "CTF",
         "genre": "CTF",
         "datePublished": "2019-12-23",
         "dateCreated": "2019-12-23",
         "dateModified": "2019-12-26",
-        "url": "http://yoursite.com/2019/12/23/bugku_web/",
+        "url": "https://gitee.com/oysjchar/2019/12/23/bugku_web/",
         "description": "
 
 2012年4月23日哈勃太空望远镜拍摄到的大麦哲伦星云星系中的蜘蛛星云照片的合成影像。 
@@ -375,7 +375,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
             
                 
                 <li>
-                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
+                    <a class="social-tooltip" title="facebook" href="/blog/" target="_blank" rel="noopener">
                         <i class="icon fa fa-facebook"></i>
                     </a>
                 </li>
@@ -407,7 +407,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
             
                 
                 <li>
-                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                    <a class="social-tooltip" title="rss" href="/blog/" target="_blank" rel="noopener">
                         <i class="icon fa fa-rss"></i>
                     </a>
                 </li>
@@ -419,7 +419,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
         
 <nav id="article-nav">
     
-        <a href="/2019/12/24/skill/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/blog/2019/12/24/skill/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
@@ -430,7 +430,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
     </a>
     
     
-        <a href="/2019/12/11/title/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog/2019/12/11/title/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
         <p class="article-nav-title">Hexo博客的使用及markdown的语法</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
@@ -454,7 +454,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2019/12/24/skill/" class="thumbnail">
+                            <a href="/blog/2019/12/24/skill/" class="thumbnail">
     
     
         <span style="background-image:url(/2019/12/24/skill/timg2.jpg)" alt="一些实用技巧总结（持续更新）" class="thumbnail-image"></span>
@@ -466,7 +466,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/12/24/skill/" class="title">一些实用技巧总结（持续更新）</a></p>
+                            <p class="item-title"><a href="/blog/2019/12/24/skill/" class="title">一些实用技巧总结（持续更新）</a></p>
                             <p class="item-date"><time datetime="2019-12-24T01:53:32.000Z" itemprop="datePublished">2019-12-24</time></p>
                         </div>
                     </li>
@@ -474,7 +474,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2019/12/23/bugku_web/" class="thumbnail">
+                            <a href="/blog/2019/12/23/bugku_web/" class="thumbnail">
     
     
         <span style="background-image:url(/2019/12/23/bugku_web/timg3.jpg)" alt="Bugku_web1~20题解" class="thumbnail-image"></span>
@@ -485,8 +485,8 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/CTF/">CTF</a></p>
-                            <p class="item-title"><a href="/2019/12/23/bugku_web/" class="title">Bugku_web1~20题解</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/CTF/">CTF</a></p>
+                            <p class="item-title"><a href="/blog/2019/12/23/bugku_web/" class="title">Bugku_web1~20题解</a></p>
                             <p class="item-date"><time datetime="2019-12-23T08:32:23.000Z" itemprop="datePublished">2019-12-23</time></p>
                         </div>
                     </li>
@@ -494,7 +494,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2019/12/11/title/" class="thumbnail">
+                            <a href="/blog/2019/12/11/title/" class="thumbnail">
     
     
         <span style="background-image:url(/2019/12/11/title/timg.jpg)" alt="Hexo博客的使用及markdown的语法" class="thumbnail-image"></span>
@@ -505,8 +505,8 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/hexo/">hexo</a></p>
-                            <p class="item-title"><a href="/2019/12/11/title/" class="title">Hexo博客的使用及markdown的语法</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/hexo/">hexo</a></p>
+                            <p class="item-title"><a href="/blog/2019/12/11/title/" class="title">Hexo博客的使用及markdown的语法</a></p>
                             <p class="item-date"><time datetime="2019-12-11T13:04:23.000Z" itemprop="datePublished">2019-12-11</time></p>
                         </div>
                     </li>
@@ -514,7 +514,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2019/12/08/aaa/" class="thumbnail">
+                            <a href="/blog/2019/12/08/aaa/" class="thumbnail">
     
     
         <span style="background-image:url(/2019/12/08/aaa/a.jpg)" alt="BLOG" class="thumbnail-image"></span>
@@ -525,8 +525,8 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/xxx/">xxx</a></p>
-                            <p class="item-title"><a href="/2019/12/08/aaa/" class="title">BLOG</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/xxx/">xxx</a></p>
+                            <p class="item-title"><a href="/blog/2019/12/08/aaa/" class="title">BLOG</a></p>
                             <p class="item-date"><time datetime="2019-12-08T14:40:25.000Z" itemprop="datePublished">2019-12-08</time></p>
                         </div>
                     </li>
@@ -534,7 +534,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2019/10/06/hello-world/" class="thumbnail">
+                            <a href="/blog/2019/10/06/hello-world/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -546,7 +546,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/10/06/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-title"><a href="/blog/2019/10/06/hello-world/" class="title">Hello World</a></p>
                             <p class="item-date"><time datetime="2019-10-06T13:45:30.217Z" itemprop="datePublished">2019-10-06</time></p>
                         </div>
                     </li>
@@ -560,7 +560,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CTF/">CTF</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/xxx/">xxx</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/CTF/">CTF</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/xxx/">xxx</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -570,7 +570,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">十二月 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">十月 2019</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -580,7 +580,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/">CTF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tag1/">tag1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tag2/">tag2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技巧/">技巧</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/CTF/">CTF</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/tag1/">tag1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/tag2/">tag2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/技巧/">技巧</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -590,7 +590,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/CTF/" style="font-size: 10px;">CTF</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/tag1/" style="font-size: 10px;">tag1</a> <a href="/tags/tag2/" style="font-size: 10px;">tag2</a> <a href="/tags/技巧/" style="font-size: 10px;">技巧</a>
+            <a href="/blog/tags/CTF/" style="font-size: 10px;">CTF</a> <a href="/blog/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/blog/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/blog/tags/tag1/" style="font-size: 10px;">tag1</a> <a href="/blog/tags/tag2/" style="font-size: 10px;">tag2</a> <a href="/blog/tags/技巧/" style="font-size: 10px;">技巧</a>
         </div>
     </div>
 
@@ -625,7 +625,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
             <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
             <div class="credit">
                 <h1 class="logo-wrap">
-                    <a href="/" class="logo"></a>
+                    <a href="/blog/" class="logo"></a>
                 </h1>
                 <p>&copy; 2020 OYsJcHar</p>
                 
@@ -646,18 +646,18 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
 
 
     
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+        <script src="/blog/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/blog/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/blog/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/blog/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/blog/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/blog/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/blog/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/blog/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/blog/libs/lightgallery/js/lg-video.min.js"></script>
     
     
-        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+        <script src="/blog/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
     
     
 
@@ -666,7 +666,7 @@ resource=index.php表示目标文件为index.php</code></pre><p>源码中的incl
 
 
 <!-- Custom Scripts -->
-<script src="/js/main.js"></script>
+<script src="/blog/js/main.js"></script>
 
     </div>
 </body>
