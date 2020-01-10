@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://gitee.com/oysjchar/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2020-01-08T12:27:29.596Z</updated>
-  <id>https://gitee.com/oysjchar/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
     <name>OYsJcHar</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>BLOG</title>
-    <link href="https://gitee.com/oysjchar/2020/01/08/ab/"/>
-    <id>https://gitee.com/oysjchar/2020/01/08/ab/</id>
+    <link href="http://yoursite.com/2020/01/08/ab/"/>
+    <id>http://yoursite.com/2020/01/08/ab/</id>
     <published>2020-01-08T12:04:41.000Z</published>
     <updated>2020-01-08T12:27:29.596Z</updated>
     
@@ -38,19 +38,19 @@
     </summary>
     
     
-      <category term="xxx" scheme="https://gitee.com/oysjchar/categories/xxx/"/>
+      <category term="xxx" scheme="http://yoursite.com/categories/xxx/"/>
     
     
-      <category term="tag1" scheme="https://gitee.com/oysjchar/tags/tag1/"/>
+      <category term="tag1" scheme="http://yoursite.com/tags/tag1/"/>
     
-      <category term="tag2" scheme="https://gitee.com/oysjchar/tags/tag2/"/>
+      <category term="tag2" scheme="http://yoursite.com/tags/tag2/"/>
     
   </entry>
   
   <entry>
     <title>一些实用技巧总结（持续更新）</title>
-    <link href="https://gitee.com/oysjchar/2019/12/24/skill/"/>
-    <id>https://gitee.com/oysjchar/2019/12/24/skill/</id>
+    <link href="http://yoursite.com/2019/12/24/skill/"/>
+    <id>http://yoursite.com/2019/12/24/skill/</id>
     <published>2019-12-24T01:53:32.000Z</published>
     <updated>2019-12-26T12:29:35.418Z</updated>
     
@@ -72,14 +72,14 @@
     
     
     
-      <category term="技巧" scheme="https://gitee.com/oysjchar/tags/%E6%8A%80%E5%B7%A7/"/>
+      <category term="技巧" scheme="http://yoursite.com/tags/%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
   <entry>
     <title>Bugku_web1~20题解</title>
-    <link href="https://gitee.com/oysjchar/2019/12/23/bugku_web/"/>
-    <id>https://gitee.com/oysjchar/2019/12/23/bugku_web/</id>
+    <link href="http://yoursite.com/2019/12/23/bugku_web/"/>
+    <id>http://yoursite.com/2019/12/23/bugku_web/</id>
     <published>2019-12-23T08:32:23.000Z</published>
     <updated>2019-12-26T12:24:58.640Z</updated>
     
@@ -97,17 +97,17 @@
     </summary>
     
     
-      <category term="CTF" scheme="https://gitee.com/oysjchar/categories/CTF/"/>
+      <category term="CTF" scheme="http://yoursite.com/categories/CTF/"/>
     
     
-      <category term="CTF" scheme="https://gitee.com/oysjchar/tags/CTF/"/>
+      <category term="CTF" scheme="http://yoursite.com/tags/CTF/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客的使用及markdown的语法</title>
-    <link href="https://gitee.com/oysjchar/2019/12/11/title/"/>
-    <id>https://gitee.com/oysjchar/2019/12/11/title/</id>
+    <link href="http://yoursite.com/2019/12/11/title/"/>
+    <id>http://yoursite.com/2019/12/11/title/</id>
     <published>2019-12-11T13:04:23.000Z</published>
     <updated>2019-12-27T12:31:41.775Z</updated>
     
@@ -123,19 +123,19 @@
     </summary>
     
     
-      <category term="hexo" scheme="https://gitee.com/oysjchar/categories/hexo/"/>
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="https://gitee.com/oysjchar/tags/hexo/"/>
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
-      <category term="Markdown" scheme="https://gitee.com/oysjchar/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>BLOG</title>
-    <link href="https://gitee.com/oysjchar/2019/12/08/aaa/"/>
-    <id>https://gitee.com/oysjchar/2019/12/08/aaa/</id>
+    <link href="http://yoursite.com/2019/12/08/aaa/"/>
+    <id>http://yoursite.com/2019/12/08/aaa/</id>
     <published>2019-12-08T14:40:25.000Z</published>
     <updated>2020-01-08T12:01:15.963Z</updated>
     
@@ -154,19 +154,19 @@
     </summary>
     
     
-      <category term="xxx" scheme="https://gitee.com/oysjchar/categories/xxx/"/>
+      <category term="xxx" scheme="http://yoursite.com/categories/xxx/"/>
     
     
-      <category term="tag1" scheme="https://gitee.com/oysjchar/tags/tag1/"/>
+      <category term="tag1" scheme="http://yoursite.com/tags/tag1/"/>
     
-      <category term="tag2" scheme="https://gitee.com/oysjchar/tags/tag2/"/>
+      <category term="tag2" scheme="http://yoursite.com/tags/tag2/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://gitee.com/oysjchar/2019/10/06/hello-world/"/>
-    <id>https://gitee.com/oysjchar/2019/10/06/hello-world/</id>
+    <link href="http://yoursite.com/2019/10/06/hello-world/"/>
+    <id>http://yoursite.com/2019/10/06/hello-world/</id>
     <published>2019-10-06T13:45:30.217Z</published>
     <updated>2019-10-06T13:45:30.217Z</updated>
     
